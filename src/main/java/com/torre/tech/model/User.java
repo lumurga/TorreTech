@@ -50,6 +50,10 @@ public class User {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Set<Skill> getSkills() {
         return skills;
     }
