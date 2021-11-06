@@ -1,6 +1,8 @@
 package com.torre.tech.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,6 +18,7 @@ public class Skill {
     private String name;
 
     @ManyToMany(mappedBy = "skills")
+    @JsonIgnore
     private Set<User> users;
 
     /* Constructor */

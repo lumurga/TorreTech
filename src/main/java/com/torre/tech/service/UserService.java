@@ -84,7 +84,7 @@ public class UserService implements IEntityService<UserDTO> {
         logger.info("Search by name in the Users entity");
 
         UserDTO userDTO = null;
-        Optional<User> user = userRepository.findUserByName(name);
+        User user = userRepository.findUserByName(name);
         if(user != null) {
             userDTO = mapper.convertValue(user, UserDTO.class);
         }

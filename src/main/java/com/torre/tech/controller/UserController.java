@@ -39,7 +39,7 @@ public class UserController {
             @ApiResponse(code = 200, message = "OK. The resource is obtained correctly", response = UserDTO.class),
             @ApiResponse(code = 400, message = "Bad Request", response = String.class),
             @ApiResponse(code = 500, message = "Unexpected error")})
-    @GetMapping("id/{id}")
+    @GetMapping("/id/{id}")
     public UserDTO findById(@PathVariable Long id) {
         logger.info("Search by id in the Users entity");
         return userService.findById(id).orElse(null);

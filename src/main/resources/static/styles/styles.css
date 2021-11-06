@@ -32,6 +32,7 @@ body {
   color: var(--clear-font-color);
 }
 
+
 h3 {
   color: var(--clear-font-color);
 }
@@ -51,7 +52,7 @@ h3 {
   max-height: 70px;
   }
  
-.navMenu div {
+.navMenu form {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -82,18 +83,20 @@ h3 {
     color: var(--clear-font-color);
   }
 
-.user {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
 
-.userPhoto {
+
+.userPhoto img{
   border-radius: 50%;
   width: 15%;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  justify-self: center;
 }  
 
 h6 {

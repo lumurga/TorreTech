@@ -1,18 +1,24 @@
 window.addEventListener('load', (e) => {
     let
-        btnGo = document.querySelector("#search"),
-        skills = document.querySelector("#resultado"),
-        user = document.querySelector(".data");
-        inputName = document.querySelector("#sInput")
+        
+        formGo = document.querySelector("#userName"),
+        user = document.querySelector("#data"),
+        inputName = document.querySelector("#sInput"),
+        skillM = document.querySelector("#skillM"),
+        skillP = document.querySelector("#skillP"),
+        skillN = document.querySelector("#skillN");
+      
 
    
-    btnGo.addEventListener('click', (e) => {
+    formGo.addEventListener('submit', (e) => {
         e.preventDefault();
         user.innerHTML = "";
-        skills.innerHTML = "";
+       
+
         fetch(`http://localhost:8080/users/${inputName.value}`)
         .then((resp) => resp.json())
         .then((info) => {
+        console.log(info);
             user.innerHTML = `
                                   <div class="userPhoto">
                                     <img src="${info.urlImage}" alt="user´s photography">
@@ -20,23 +26,23 @@ window.addEventListener('load', (e) => {
                                   </div>
                         
                                      `
-            inputName.reset();
-           
+            formGo.reset();
+            
 
-        }
-
-    )
-
+        }) 
+        .catch((error) => console.log(error));
+   })
 })
 
 
-skills.innerHTML = `
-<ul class="skill" id="skills">
-      <li>${info.skills}</li>     
-</ul>
 
 
 
- `
+// skills.innerHTML = `
+// <ul class="skill" id="skills">
+//       <li>${info.skills}</li>     
+// </ul>
 
-})
+
+
+//  `

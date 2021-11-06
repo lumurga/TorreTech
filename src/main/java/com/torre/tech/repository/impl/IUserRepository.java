@@ -6,15 +6,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Optional;
+
+
 
 
 @Repository
 @Transactional
 public interface IUserRepository extends JpaRepository<User, Long>{
 
-
-    Optional<User> findUserByName(String name);
+    @Query("SELECT u FROM User u WHERE u.name = ?1")
+    public User findUserByName(String name);
 
 }

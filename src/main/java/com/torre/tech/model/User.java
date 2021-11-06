@@ -19,8 +19,8 @@ public class User {
 
 
     @JoinTable(name = "users_skills",
-            joinColumns = @JoinColumn(name = "id_user", nullable = false),
-            inverseJoinColumns = @JoinColumn(name = "id_skill", nullable = false)
+            joinColumns = @JoinColumn(name = "id_user"),//, nullable = false
+            inverseJoinColumns = @JoinColumn(name = "id_skill")//, nullable = false
     )
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Skill> skills = new HashSet<>();
