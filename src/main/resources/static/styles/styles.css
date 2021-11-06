@@ -10,14 +10,10 @@
 
 :root {
   --main-color: #ecebe9;
-  --second-color: #aba29c;
   --bg-color: #404040;
   --skill-bg-color: #555454;
-  --font-color: #3c2313;
-  --secondary-font-color: #91e0df;
-  --logo-font-color: #3e721d;
   --clear-font-color: #ece8e8;
-  
+  --secondary-font-color: #91e0df;
   --soft-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
   --nav-shadow: 7px 4px 5px 0px rgba(146, 142, 142, 0.55);
 }
@@ -31,7 +27,6 @@ body {
   background-color: var(--bg-color);
   color: var(--clear-font-color);
 }
-
 
 h3 {
   color: var(--clear-font-color);
@@ -82,14 +77,13 @@ h3 {
 .navMenu div input::placeholder{
     color: var(--clear-font-color);
   }
-
-  .user {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-  }
-
+ 
+.userPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
 
 .userPhoto img{
   border-radius: 50%;
@@ -113,7 +107,6 @@ h6 {
 }
 
 .skills img {
-  
   margin-right: 1rem;
 }
 
@@ -146,8 +139,6 @@ h6 {
   padding: 0.8rem;
   margin: 0.5rem;
 }
-
-
 
 .hamMenu {  
   list-style: none;
