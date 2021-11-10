@@ -34,6 +34,10 @@ h3 {
   color: var(--clear-font-color);
 }
 
+button {
+  border-radius: 20%;
+}
+
 .otherColor {
   color: var(--secondary-font-color);
 }
@@ -114,8 +118,9 @@ h6 {
   padding: 3rem;
 }
 
-.skills img {
+.skills i {
   margin-right: 1rem;
+ 
 }
 
 .master, 
@@ -135,6 +140,7 @@ h6 {
 
 .skill {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .skill li {
